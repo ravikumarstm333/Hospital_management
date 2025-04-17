@@ -1,0 +1,153 @@
+/* Messages.css */
+
+.page.messages {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+  }
+  
+  .page.messages h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .page.messages h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+  
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #3498db;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .details p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .details span {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+    flex-grow: 1;
+  }
+  
+  .details p::before {
+    margin-right: 0.5rem;
+    color: #3498db;
+  }
+  
+  .details p:nth-child(1)::before {
+    content: '👤';
+  }
+  
+  .details p:nth-child(2)::before {
+    content: '👤';
+  }
+  
+  .details p:nth-child(3)::before {
+    content: '✉️';
+  }
+  
+  .details p:nth-child(4)::before {
+    content: '📞';
+  }
+  
+  .details p:nth-child(5)::before {
+    content: '🆔';
+  }
+  
+  .details p:nth-child(6)::before {
+    content: '💬';
+  }
+  
+  /* No messages found style */
+  .banner > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #95a5a6;
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+  
+  /* Loading state */
+  .loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #3498db;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .page.messages {
+      padding: 1rem;
+    }
+    
+    .banner {
+      grid-template-columns: 1fr;
+    }
+    
+    .card {
+      padding: 1rem;
+    }
+  }
+  
+  /* Animation for card entry */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+  .card:nth-child(5) { animation-delay: 0.5s; }

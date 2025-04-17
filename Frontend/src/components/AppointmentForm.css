@@ -1,0 +1,150 @@
+/* Appointment Form Styles */
+.appointment-form {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-form h2 {
+    text-align: center;
+    color: #056C5F;
+    font-size: 32px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .appointment-form h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #056C5F;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  .appointment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .appointment-form form div {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .appointment-form input:focus,
+  .appointment-form select:focus,
+  .appointment-form textarea:focus {
+    outline: none;
+    border-color: #056C5F;
+    box-shadow: 0 0 0 2px rgba(5, 108, 95, 0.2);
+    background-color: white;
+  }
+  
+  .appointment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .appointment-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+  }
+  
+  .appointment-form button {
+    background: linear-gradient(135deg, #056C5F, #034a43);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: fit-content;
+    align-self: center;
+  }
+  
+  .appointment-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(5, 108, 95, 0.4);
+  }
+  
+  .appointment-form div[style*="flex-direction: row"] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -15px;
+  }
+  
+  .appointment-form div[style*="flex-direction: row"] p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .appointment-form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #056C5F;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .appointment-form {
+      padding: 30px;
+    }
+    
+    .appointment-form form div {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .appointment-form {
+      padding: 25px 20px;
+      margin: 30px auto;
+    }
+    
+    .appointment-form h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .appointment-form {
+      border-radius: 10px;
+    }
+    
+    .appointment-form h2 {
+      font-size: 24px;
+    }
+    
+    .appointment-form button {
+      width: 100%;
+      padding: 12px;
+    }
+  }

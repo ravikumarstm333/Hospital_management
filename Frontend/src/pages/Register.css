@@ -1,0 +1,258 @@
+/* Register Form CSS - Khatarnak Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.form-component.register-form {
+  max-width: 800px;
+  margin: 5vh auto;
+  margin-top: 150px;
+  padding: 3rem;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(100, 115, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+
+.register-form h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #64b5f6, #6473ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 700;
+}
+
+.register-form .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #b8c2cc;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.register-form .description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+}
+
+.register-form form {
+  position: relative;
+  z-index: 1;
+}
+
+.register-form .form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.register-form .input-group {
+  flex: 1;
+  position: relative;
+}
+
+.register-form input,
+.register-form select {
+  width: 90%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: none;
+  border-color: #6473ff;
+  box-shadow: 0 0 0 3px rgba(100, 115, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.register-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.register-form input.error,
+.register-form select.error {
+  border-color: #ff6b6b;
+  animation: shake 0.5s ease-in-out;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.register-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.register-form .error-message {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  padding-left: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.register-form .form-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-form .form-footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.register-form .login-link {
+  color: #64b5f6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.register-form .login-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #64b5f6;
+  transition: width 0.3s ease;
+}
+
+.register-form .login-link:hover::after {
+  width: 100%;
+}
+
+.register-form button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #6473ff, #64b5f6);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(100, 115, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(100, 115, 255, 0.6);
+}
+
+.register-form button:active {
+  transform: translateY(0);
+}
+
+.register-form button:disabled {
+  background: linear-gradient(90deg, #b8c2cc, #8795a1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.register-form button .spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-component.register-form {
+    margin: 2vh auto;
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .register-form h2 {
+    font-size: 2rem;
+  }
+  
+  .register-form .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .register-form .form-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  
+  .register-form button {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

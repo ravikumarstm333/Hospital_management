@@ -1,0 +1,142 @@
+/* Footer CSS - Green Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+footer {
+  padding: 3rem 0 0;
+  font-family: 'Poppins', sans-serif;
+  background: #030303; /* Green background */
+  color: #ffffff; /* White text for better contrast */
+  position: relative;
+  overflow: hidden;
+}
+
+footer hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  margin-bottom: 3rem;
+}
+
+footer .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .logo-img {
+  width: 180px;
+  height: auto;
+  /* Remove filter to show original logo colors */
+  filter: none;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+footer .logo-img:hover {
+  transform: scale(1.05);
+}
+
+footer h4 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffffff; /* White accent line */
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.8rem;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: #ffffff; /* Solid white on hover */
+  transform: translateX(3px);
+}
+
+footer .hours li {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .hours li span:first-child {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+footer .hours li span:last-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer > div:last-child div {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Icons */
+footer svg {
+  margin-right: 0.8rem;
+  color: #ffffff; /* White icons */
+  font-size: 1.1rem;
+  min-width: 20px;
+  transition: transform 0.3s ease;
+}
+
+footer > div:last-child div:hover svg {
+  transform: scale(1.1);
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 2rem 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  footer h4 {
+    font-size: 1.2rem;
+  }
+  
+  footer .logo-img {
+    width: 150px;
+  }
+}

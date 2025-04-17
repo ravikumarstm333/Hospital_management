@@ -1,0 +1,151 @@
+/* Hero Section Styles */
+.hero {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 120px 100px;
+    /* background-color: #056C5F; */
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero .banner {
+    flex: 1;
+  }
+  
+  .hero .banner h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero .banner h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e0f2f1;
+  }
+  
+  .hero .banner p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e0f2f1;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero .banner img.animated-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+  }
+  
+  .hero .banner span {
+    position: absolute;
+    right: -300px;
+    top: -200px;
+    z-index: 0;
+  }
+  
+  .hero .banner span img {
+    opacity: 0.3;
+    width: 800px;
+    height: 800px;
+  }
+  
+  /* Animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .animated-image {
+    margin-top: 15px;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1186px) {
+    .hero {
+      padding: 100px 50px;
+    }
+    
+    .hero .banner h1 {
+      font-size: 40px;
+    }
+    
+    .hero .banner h2 {
+      font-size: 28px;
+    }
+    
+    .hero .banner span {
+      right: -400px;
+    }
+  }
+  
+  @media (max-width: 925px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 80px 30px;
+    }
+    
+    .hero .banner:first-child {
+      order: 1;
+    }
+    
+    .hero .banner h1 {
+      font-size: 36px;
+    }
+    
+    .hero .banner p {
+      font-size: 18px;
+    }
+    
+    .hero .banner span {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 60px 20px;
+    }
+    
+    .hero .banner h1 {
+      font-size: 32px;
+    }
+    
+    .hero .banner h2 {
+      font-size: 24px;
+    }
+    
+    .hero .banner p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero .banner h1 {
+      font-size: 28px;
+    }
+    
+    .hero .banner h2 {
+      font-size: 20px;
+    }
+  }

@@ -1,0 +1,209 @@
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.dashboard.page{
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  /* Banner Styles */
+  .dashboard .banner {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+
+
+  .dashboard .banner h3.centered-heading {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    border: none;
+    /* margin: 0 auto 1.5rem; */
+    /* padding-bottom: 0.5rem; */
+    position: relative;
+  }
+
+  
+  .dashboard .firstBox {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .dashboard .firstBox img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .dashboard .firstBox .content {
+    flex: 1;
+  }
+  
+  .dashboard .firstBox .content p:first-child {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dashboard .firstBox .content h5 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+  }
+  
+  .dashboard .firstBox .content p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .dashboard .secondBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+  
+  .dashboard .secondBox p {
+    font-size: 1rem;
+    color: #1976d2;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  
+  .dashboard .secondBox h3 {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin: 0;
+  }
+  
+  /* Table Styles */
+  .dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .dashboard table thead {
+    background-color: #f8f9fa;
+  }
+  
+  .dashboard table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .dashboard table td {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+  }
+  
+  .dashboard table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .dashboard table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Status Select Styles */
+  .dashboard select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .dashboard select.value-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+  }
+  
+  .dashboard select.value-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+  }
+  
+  .dashboard select.value-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+  }
+  
+  .dashboard select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Icons */
+  .dashboard .green {
+    color: #28a745;
+    font-size: 1.5rem;
+  }
+  
+  .dashboard .red {
+    color: #dc3545;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .dashboard .banner {
+      flex-direction: column;
+    }
+    
+    .dashboard .firstBox {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .dashboard table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+  
+  /* No Appointments Message */
+  .dashboard td[colspan] {
+    color: #6c757d;
+    font-style: italic;
+    padding: 2rem 0;
+  }

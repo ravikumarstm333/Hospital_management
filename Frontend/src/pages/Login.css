@@ -1,0 +1,206 @@
+/* Login Form CSS - Khatarnak Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+body {
+  background: linear-gradient(145deg, #2c3ee2, #0cb645);
+}
+.form-component.login-form {
+  
+  max-width: 650px;
+  margin: 5vh auto;
+  margin-top:150px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-form::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-form h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #ff6b6b, #f8a5c2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.login-form p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #b8c2cc;
+  position: relative;
+  z-index: 1;
+}
+
+.login-form form {
+  position: relative;
+  z-index: 1;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1.5rem;
+  margin-right: 20px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #f8a5c2;
+  box-shadow: 0 0 0 3px rgba(248, 165, 194, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form input.error {
+  border-color: #172874;
+  animation: shake 0.5s ease-in-out;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.error-message {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #131212, #170a8b);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(248, 165, 194, 0.4);
+}
+
+.login-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(248, 165, 194, 0.6);
+}
+
+.login-form button:active {
+  transform: translateY(0);
+}
+
+.login-form button:disabled {
+  background: linear-gradient(90deg, #b8c2cc, #8795a1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.login-form button .spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.login-form p:last-child {
+  text-align: center;
+  margin-top: 2rem;
+  color: #b8c2cc;
+}
+
+.login-form a {
+  color: #f8a5c2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.login-form a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f8a5c2;
+  transition: width 0.3s ease;
+}
+
+.login-form a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-component.login-form {
+    margin: 2vh auto;
+    padding: 1.5rem;
+    width: 90%;
+  }
+  
+  .login-form h2 {
+    font-size: 1.8rem;
+  }
+}

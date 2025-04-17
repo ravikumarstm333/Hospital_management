@@ -1,0 +1,171 @@
+/* Message Form Component Styles */
+.message-form {
+    position: relative;
+    padding: 60px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 60px auto;
+  }
+  
+  .message-form h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #056C5F;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .message-form h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #056C5F;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  .message-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .message-form form div {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .message-form input,
+  .message-form textarea {
+    flex: 1;
+    padding: 16px 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .message-form input:focus,
+  .message-form textarea:focus {
+    outline: none;
+    border-color: #056C5F;
+    box-shadow: 0 0 0 3px rgba(5, 108, 95, 0.1);
+    background-color: white;
+  }
+  
+  .message-form textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .message-form button {
+    background: linear-gradient(135deg, #056C5F, #034a43);
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: fit-content;
+    align-self: center;
+  }
+  
+  .message-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(5, 108, 95, 0.3);
+  }
+  
+  .message-form img {
+    position: absolute;
+    right: -150px;
+    top: -100px;
+    z-index: 1;
+    opacity: 0.15;
+    width: 600px;
+    height: 600px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .message-form {
+      padding: 50px 40px;
+    }
+    
+    .message-form h2 {
+      font-size: 28px;
+    }
+    
+    .message-form form div {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .message-form img {
+      right: -200px;
+      top: -150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .message-form {
+      padding: 40px 30px;
+      margin: 40px auto;
+    }
+    
+    .message-form h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    
+    .message-form input,
+    .message-form textarea {
+      padding: 14px 20px;
+    }
+    
+    .message-form button {
+      padding: 14px 30px;
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .message-form {
+      padding: 30px 20px;
+    }
+    
+    .message-form h2 {
+      font-size: 24px;
+    }
+    
+    .message-form img {
+      display: none;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .message-form form {
+    animation: fadeIn 0.6s ease-out forwards;
+  }

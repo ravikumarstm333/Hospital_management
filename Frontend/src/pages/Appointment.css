@@ -1,0 +1,269 @@
+/* Appointment Page - Premium Styling */
+.appointment-page {
+    margin-top: 15px;
+
+    background: #f8fbfb;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section - Luxurious Design */
+  .appointment-hero {
+    background: linear-gradient(135deg, 
+                rgba(5, 108, 95, 0.85) 0%, 
+                rgba(3, 74, 67, 0.9) 100%),
+                url('/photoes/docmen.png') center/cover no-repeat;
+    color: white;
+    /* padding: 150px 0 100px; */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .appointment-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 50%);
+    z-index: 1;
+  }
+  
+  .appointment-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    /* padding: 0 20px; */
+  }
+  
+  .appointment-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 auto 30px;
+    white-space: pre-line;
+    background: linear-gradient(to right, #fff, #e0f2f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .appointment-hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+  
+  /* Floating Particles Effect */
+  .particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Form Section - Premium Card */
+  .appointment-form-section {
+    padding: 80px 0;
+    position: relative;
+    background: #f8fbfb;
+  }
+  
+  .appointment-form-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #f8fbfb;
+    clip-path: ellipse(75% 100% at 50% 0%);
+    z-index: 1;
+  }
+  
+  .form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -10px rgba(5, 108, 95, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+  }
+  
+  .form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, 
+                #056C5F 0%, 
+                #4CAF50 50%, 
+                #8BC34A 100%);
+  }
+  
+  /* Floating Medical Icons */
+  .medical-icon {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 1;
+    font-size: 100px;
+    color: #056C5F;
+    pointer-events: none;
+  }
+  
+  .medical-icon:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  
+  .medical-icon:nth-child(2) {
+    bottom: 15%;
+    right: 8%;
+    font-size: 80px;
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Animation Effects */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .appointment-hero h1,
+  .appointment-hero p {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .appointment-hero p {
+    animation-delay: 0.3s;
+  }
+  
+  .form-container {
+    animation: fadeInUp 1s ease-out 0.6s both;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .appointment-hero {
+      padding: 120px 0 80px;
+    }
+    
+    .appointment-hero h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .appointment-hero h1 {
+      font-size: 2.5rem;
+      max-width: 600px;
+    }
+    
+    .appointment-hero p {
+      font-size: 1.1rem;
+    }
+    
+    .appointment-form-section {
+      padding: 60px 20px;
+    }
+    
+    .form-container {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .appointment-hero {
+      padding: 100px 0 60px;
+      min-height: 50vh;
+    }
+    
+    .appointment-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .form-container {
+      border-radius: 15px;
+    }
+    
+    .medical-icon {
+      font-size: 70px;
+    }
+    
+    .medical-icon:nth-child(2) {
+      font-size: 60px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .appointment-hero {
+      padding: 80px 0 40px;
+    }
+    
+    .appointment-hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .appointment-hero p {
+      font-size: 1rem;
+    }
+    
+    .appointment-form-section::before {
+      height: 50px;
+      clip-path: ellipse(85% 100% at 50% 0%);
+    }
+    
+    .form-container {
+      padding: 25px 20px;
+    }
+    
+    .medical-icon {
+      display: none;
+    }
+  }

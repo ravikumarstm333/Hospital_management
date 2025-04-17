@@ -1,0 +1,172 @@
+/* AddNewAdmin.css - Professional Design */
+
+.AddNewAdminpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 40px;
+  }
+  
+  .container.form-component.add-admin-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 3.5rem;
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  .form-title {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: -0.5px;
+  }
+  
+  .form-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+    border-radius: 4px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  form > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f8fafc;
+    color: #1e293b;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+  }
+  
+  input::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+  }
+  
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+  }
+  
+  button[type="submit"] {
+    grid-column: 1 / -1;
+    padding: 1.1rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+    letter-spacing: 0.5px;
+  }
+  
+  button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  }
+  
+  button[type="submit"]:active {
+    transform: translateY(0);
+  }
+  
+  /* Date input styling */
+  input[type="date"] {
+    appearance: none;
+    position: relative;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container.form-component.add-admin-form {
+      padding: 2.5rem;
+    }
+    
+    form > div {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+    
+    .form-title {
+      font-size: 1.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .AddNewAdminpage {
+      padding: 1.5rem;
+    }
+    
+    .container.form-component.add-admin-form {
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    
+    .form-title {
+      font-size: 1.7rem;
+    }
+    
+    input, select {
+      padding: 0.9rem 1rem;
+    }
+    
+    button[type="submit"] {
+      padding: 1rem;
+    }
+  }

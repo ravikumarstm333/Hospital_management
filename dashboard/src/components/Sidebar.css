@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #3498db;
+  --dark: #2c3e50;
+  --light: #ecf0f1;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Modern Navbar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--dark);
+  color: white;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sidebar .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+.sidebar .links span {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--light);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 12px 15px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar .links span .icon {
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+
+.sidebar .links span:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.sidebar .links span:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Underline Animation */
+.sidebar .links span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+.sidebar .links span:hover::after {
+  width: 80%;
+}
+
+/* Active State */
+.sidebar .links span.active {
+  color: var(--primary);
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.sidebar .links span.active::after {
+  width: 80%;
+}
+
+/* Mobile Menu Enhancements */
+@media (max-width: 768px) {
+  .sidebar {
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    justify-content: flex-start;
+    padding-top: 80px;
+    background-color: rgba(44, 62, 80, 0.98);
+  }
+  
+  .sidebar.show {
+    left: 0;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar .links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 1rem;
+  }
+  
+  .wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+  }
+  
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  .hamburger:hover {
+    transform: rotate(180deg);
+    background: #2980b9;
+  }
+  
+  body {
+    padding-top: 0;
+  }
+}
+
+/* Smooth Animations */
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.sidebar.show .links span {
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* Sequential Animation Delay */
+.sidebar.show .links span {
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+/* Backdrop for mobile menu */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.sidebar.show + .menu-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
